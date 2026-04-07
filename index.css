@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+h2 {
+    color:black;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    
+}
+
+
+
