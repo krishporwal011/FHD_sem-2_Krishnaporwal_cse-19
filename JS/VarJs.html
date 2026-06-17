@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //js variable data types value
+
+        //primitive: mutuable single value and stores in memory
+
+        //string====
+        var myName = "Abhyudai";
+        console.log("My name is" + myName);
+        //number
+        var myMob = "933xxxx";
+        console.log("My Mobile no. is" + myMob);
+        console.log(typeof (myMob));
+
+        //Boolean
+        var isMarried = true;
+        console.log(myName + "is Married:" + isMarried);
+        console.log(typeof (isMarried));
+
+        //undefined
+        var myAdd;
+        console.log(myName + "address is:" + myAdd);
+        console.log(typeof (myAdd));
+
+        //null
+        var myEmail = null;
+        console.log(myName + "email address:" + myEmail);
+        console.log(typeof (myEmail));
+
+        //bigint
+        var myValue = BigInt(12345678909876543212345678909876543212);
+        console.log(myValue);
+        console.log(typeof (myValue));
+
+        //Symbol:unique primitive data value type in js
+        var val1 = Symbol("Hello");
+        var val2 = Symbol("Hello");
+        console.log(val1 == val2);
+        console.log(typeof (val1) + "add" + typeof (val2))
+
+        //Refrence or Non-primitive Data Va;ue Types=========
+        //object()- valuess are defined in paired of key-value
+
+        let myInfo = {
+            name: "Vikas",
+            age: 23,
+            mob: 1234567890,
+            eMail: "abhyudaimain@gmail.com",
+            isMarried: false,
+            address: null,
+            branch: "CSE",
+            section: 18,
+        }
+        console.log(myInfo);
+        // to find length of a object
+        console.log(Object.keys(myInfo).length);
+        console.log(myInfo.branch);
+
+        //array- Coleection of any data types is Js
+        let studentDetail = [
+            "Abhay",
+            24,
+            false,
+            "abhay21@gmail.com",
+            "Sultanpur "];
+        console.log(studentDetail[2]);
+        console.log(studentDetail.length);
+
+        for (i = 0; i < studentDetail.length; i++) {
+            console.log(studentDetail[i]);
+        }
+
+        //Function- Block of code i.e perfor, particular any task
+        function myCal() {
+            let num1 = 5;
+            let num2 = 10;
+            let result = num1 + num2;
+            console.log("Addition of two Numbers is :" + result);
+            console.log(result);
+
+        }
+        myCal();
+
+    </script>
+</body>
+
+</html>

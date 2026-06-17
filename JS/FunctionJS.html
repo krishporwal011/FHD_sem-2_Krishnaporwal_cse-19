@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+
+<body>
+    <script>
+        //normal function
+        // demo();
+        // function demo() {
+        //     console.log("Hello ABES")
+        // }
+
+        //with parameters
+        // function cal(a,b) {
+        //     var num1 = a;
+        //     var num2 = b;
+        //     console.log("addition of numbers are: " + (num1 + num2));
+        // }
+        // cal(2.4);
+
+        //with deafult parameters
+        /* function add(a, b) {
+             var num1 = a;
+             var num2 = b;
+             var res1 = num1 + num2;
+             console.log("Addition of numbers are:" + res1)
+         }
+         function mul(a, b = 5) {
+             var num1 = a;
+             var num2 = b;
+             var res2 = num1 * num2;
+             console.log("multiplication of numbers are:" + res2)
+         }
+         function div(a, b = 8) {
+             var num1 = a;
+             var num2 = b;
+             var res3 = num1 / num2;
+             console.log("division of numbers are:" + res3)
+         }
+         div(8);
+         add(4,5);
+         mul(10); */
+
+        /*  let demo1=function(){
+         console.log("hello ABES");
+         }
+         demo1(); */
+        //shortes way to write above function i.e. arrow function
+        /*  let demo1=()=>{
+            console.log("Hello JS");
+         }
+
+         demo1(); */
+        // above function in signle line
+        // let demo1 = () => console.log("Hello Java Script");
+        // demo1();
+
+        // (function () {
+        //     console.log("IIFE in JS");
+        // })();
+        //callback in synchronous
+        /* function addRes(callback){
+            var num1=5;
+            var num2=10;
+            var res=num1+num2;
+            callback(res)
+        }
+        function result(res){
+            console.log("Addiontion of two number is " + res);
+        }
+        addRes(result); */
+        //callback in asynchronous using setTimeout API
+
+        /* function hello(){
+            console.log("Hello JS");
+        }
+        
+        function process(){
+            console.log("processing");
+        }
+        setTimeout(hello, 5000);
+        process(); */
+
+        //another example using call back
+
+        // function display(callback) {
+        //     console.log("Display data from server");
+
+        //     setTimeout(function () {
+        //         let data = {
+        //             name: "Abhyudai",
+        //             age: 19,
+        //             isMarried: null
+        //         };
+
+        //         callback(data)
+        //     }, 2000);
+        // };
+        // function displayUser(user) {
+        //     console.log(`${user.name} age is ${user.age} and ${user.isMarried}`);
+        // }
+        // display(displayUser);
+
+        let myPromises = new Promise(function (resolve, reject) {
+            let age = 25;
+            if (age >= 18) {
+                resolve("valid age");
+            }
+            else {
+                reject("wait for next year");
+            }
+        }
+        );
+        myPromises
+            .then(result => console.log(result))
+            .catch(error => console.log(error))
+            .finally(console.log("Done"));
+
+        async function userData() {
+            try {
+                let reponse = await fetch('https://dummyjson.com/products');
+                let responseData = await response.json();
+                console.log(responseData);
+
+            }
+            catch (error) {
+                console.log(error);
+            }
+        }
+        let num = [3, 4, 5, 6, 7];
+        let square = num.map(n => n * 2);
+        console.log(square);
+
+        let sum = num.reduce((total, n) => total + n);
+        console.log(sum);
+
+        let sorting = num.filter((total, n) => total + n);
+        console.log(sorting);
+        //foreach
+        num.forEach((n) => console.log(n * 2));
+        //Iife
+        (function () {
+            console.log("Modern JS");
+        })();
+        //shoet code
+        (msg => console.log("Hello React"))();
+        //local storage
+        let userInfo = {
+            name: 'John',
+            age: 25,
+            mob: 8323574327,
+            eMail: "john23@64hf",
+        }
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+        const savedUser = JSON.parse(localStorage.getItem('UserInfo'));
+
+        console.log(savedUser.name)
+
+    </script>
+
+</body>
+
+</html>
